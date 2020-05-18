@@ -1,3 +1,15 @@
+h1 {
+    color: burlywood;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 3em;
+    
+}
+body {
+    margin: 0;
+    background-color: brown;
+}
 #board {
     padding: 3em;
     text-align: center;
@@ -8,26 +20,68 @@
     height: 100px;
     width: 100px;
     cursor: pointer;
+    font-size: 75px;
 }
-
+.row > div:hover {
+    background-color: lightsalmon;
+}
 .row {
+    height: 100px;
     clear: both;
     margin: 0 auto;
-    width: 302px;
+    width: 325px;
 }
 
 .top {
-    border-bottom: 1px solid black;
+    border-bottom: 10px solid rgb(158, 168, 17);
 }
 
 .bottom {
-    border-top: 1px solid black;
+    border-top: 10px solid rgb(18,124,44);
 }
 
 .left {
-    border-right: 1px solid black;
+    border-right: 10px solid rgb(108, 124, 18)
 }
 
 .right {
-    border-left: 1px solid black;
+    border-left: 10px solid rgb(18, 124, 71);
 }
+.winner {
+    color: blue
+}
+.winner-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.winner-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+
+}
+
+.winner-message button:hover {
+    background-color: black;
+    color:white;
+    border-color: white;
+}
+    
+.winner-message.show {
+    display: flex;
+}
+
+
